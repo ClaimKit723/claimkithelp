@@ -712,6 +712,21 @@
   }, { threshold: 0.08 });
   reveals.forEach(r => observer.observe(r));
 
+ <script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.08 });
+  reveals.forEach(r => observer.observe(r));
+
   // FAQ accordion
   document.querySelectorAll('.faq-q').forEach(q => {
-    q.
+    q.addEventListener('click', () => {
+      q.closest('.faq-item').classList.toggle('open');
+    });
+  });
+</script>
+
+</body>
+</html>
