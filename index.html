@@ -712,7 +712,7 @@
   }, { threshold: 0.08 });
   reveals.forEach(r => observer.observe(r));
 
- <script>
+<script>
   // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver(entries => {
@@ -723,10 +723,11 @@
   // FAQ accordion
   document.querySelectorAll('.faq-q').forEach(q => {
     q.addEventListener('click', () => {
-      q.closest('.faq-item').classList.toggle('open');
+      const item = q.closest('.faq-item');
+      item.classList.toggle('open');
     });
   });
-</script>
 
-</body>
-</html>
+  // Debug: log what IDs exist on the page
+  console.log('Sections found:', document.querySelectorAll('[id]').length);
+</script>
