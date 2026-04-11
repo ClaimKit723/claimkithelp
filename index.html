@@ -228,6 +228,90 @@
     margin: 1.5rem auto;
   }
 
+  /* ── TESTIMONIALS ── */
+  .testimonials {
+    padding: 80px 2rem;
+    background: var(--cream);
+    border-top: 0.5px solid var(--border);
+  }
+  .testimonials-inner { max-width: 900px; margin: 0 auto; }
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 3rem;
+  }
+  @media (max-width: 780px) { .testimonials-grid { grid-template-columns: 1fr; } }
+  .testimonial-card {
+    background: var(--white);
+    border: 0.5px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    transition: border-color .2s, transform .2s;
+  }
+  .testimonial-card:hover { border-color: var(--sage); transform: translateY(-2px); }
+  .testimonial-stars {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 1rem;
+  }
+  .testimonial-stars svg { width: 16px; height: 16px; }
+  .testimonial-text {
+    font-size: 14px;
+    color: var(--charcoal);
+    line-height: 1.7;
+    flex: 1;
+    font-style: italic;
+  }
+  .testimonial-source {
+    margin-top: 1.25rem;
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .testimonial-source::before {
+    content: '';
+    width: 20px;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* ── GUARANTEE ── */
+  .guarantee-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1.5rem;
+    padding: 14px 24px;
+    background: var(--sage-pale);
+    border: 0.5px solid var(--sage-mist);
+    border-radius: 12px;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .guarantee-icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+  }
+  .guarantee-text {
+    font-size: 13px;
+    color: var(--charcoal);
+    line-height: 1.5;
+  }
+  .guarantee-text strong {
+    color: var(--sage-deep);
+    font-weight: 500;
+  }
+
   /* ── PRICING ── */
   .pricing { padding: 96px 2rem; background: var(--white); }
   .pricing-inner { max-width: 960px; margin: 0 auto; }
@@ -386,7 +470,7 @@
   @media (max-width: 600px) {
     .nav-links { display: none; }
     .hero { padding: 100px 1.25rem 60px; }
-    .who-grid, .pricing-grid { grid-template-columns: 1fr; }
+    .who-grid, .pricing-grid, .testimonials-grid { grid-template-columns: 1fr; }
   }
 </style>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -554,6 +638,54 @@
   </div>
 </section>
 
+<!-- TESTIMONIALS -->
+<section class="testimonials reveal">
+  <div class="testimonials-inner">
+    <div class="section-label">Real people. Real results.</div>
+    <h2 class="section-h2">Don't take our word for it.</h2>
+    <p class="section-sub">Here's what ClaimKit customers are saying after using the guides.</p>
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <svg viewBox="0 0 16 16" fill="#c9a96e"><path d="M8 0l2.47 5.01L16 5.82l-4 3.9.94 5.5L8 12.49l-4.94 2.73.94-5.5-4-3.9 5.53-.81z"/></svg>
+          <svg viewBox="0 0 16 16" fill="#c9a96e"><path d="M8 0l2.47 5.01L16 5.82l-4 3.9.94 5.5L8 12.49l-4.94 2.73.94-5.5-4-3.9 5.53-.81z"/></svg>
+          <svg viewBox="0 0 16 16" fill="#c9a96e"><path d="M8 0l2.47 5.01L16 5.82l-4 3.9.94 5.5L8 12.49l-4.94 2.73.94-5.5-4-3.9 5.53-.81z"/></svg>
+          <svg viewBox="0 0 16 16" fill="#c9a96e"><path d="M8 0l2.47 5.01L16 5.82l-4 3.9.94 5.5L8 12.49l-4.94 2.73.94-5.5-4-3.9 5.53-.81z"/></svg>
+          <svg viewBox="0 0 16 16" fill="#c9a96e"><path d="M8 0l2.47 5.01L16 5.82l-4 3.9.94 5.5L8 12.49l-4.94 2.73.94-5.5-4-3.9 5.53-.81z"/></svg>
+        </div>
+        <p class="testimonial-text">"Landlord tried to keep my deposit, saying the place wasn't clean, BUT IT WAS!! ClaimKit is the key to being prepared, then being awarded the full deposit PLUS damages. I totally recommend this product!"</p>
+        <div class="testimonial-source">Verified Google Review</div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <svg viewBox="0 0 16 16" fill="#c9a96e"><path d="M8 0l2.47 5.01L16 5.82l-4 3.9.94 5.5L8 12.49l-4.94 2.73.94-5.5-4-3.9 5.53-.81z"/></svg>
+          <svg viewBox="0 0 16 16" fill="#c9a96e"><path d="M8 0l2.47 5.01L16 5.82l-4 3.9.94 5.5L8 12.49l-4.94 2.73.94-5.5-4-3.9 5.53-.81z"/></svg>
+          <svg viewBox="0 0 16 16" fill="#c9a96e"><path d="M8 0l2.47 5.01L16 5.82l-4 3.9.94 5.5L8 12.49l-4.94 2.73.94-5.5-4-3.9 5.53-.81z"/></svg>
+          <svg viewBox="0 0 16 16" fill="#c9a96e"><path d="M8 0l2.47 5.01L16 5.82l-4 3.9.94 5.5L8 12.49l-4.94 2.73.94-5.5-4-3.9 5.53-.81z"/></svg>
+          <svg viewBox="0 0 16 16" fill="#c9a96e"><path d="M8 0l2.47 5.01L16 5.82l-4 3.9.94 5.5L8 12.49l-4.94 2.73.94-5.5-4-3.9 5.53-.81z"/></svg>
+        </div>
+        <p class="testimonial-text">"Super helpful and easy to follow. These PDFs are organized, straightforward, and truly a must have if you're dealing with a case. I especially liked the scripts and checklists. They made everything feel way less overwhelming. I feel much more prepared going into court. Definitely worth it!"</p>
+        <div class="testimonial-source">Verified Etsy Review</div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <svg viewBox="0 0 16 16" fill="#c9a96e"><path d="M8 0l2.47 5.01L16 5.82l-4 3.9.94 5.5L8 12.49l-4.94 2.73.94-5.5-4-3.9 5.53-.81z"/></svg>
+          <svg viewBox="0 0 16 16" fill="#c9a96e"><path d="M8 0l2.47 5.01L16 5.82l-4 3.9.94 5.5L8 12.49l-4.94 2.73.94-5.5-4-3.9 5.53-.81z"/></svg>
+          <svg viewBox="0 0 16 16" fill="#c9a96e"><path d="M8 0l2.47 5.01L16 5.82l-4 3.9.94 5.5L8 12.49l-4.94 2.73.94-5.5-4-3.9 5.53-.81z"/></svg>
+          <svg viewBox="0 0 16 16" fill="#c9a96e"><path d="M8 0l2.47 5.01L16 5.82l-4 3.9.94 5.5L8 12.49l-4.94 2.73.94-5.5-4-3.9 5.53-.81z"/></svg>
+          <svg viewBox="0 0 16 16" fill="#c9a96e"><path d="M8 0l2.47 5.01L16 5.82l-4 3.9.94 5.5L8 12.49l-4.94 2.73.94-5.5-4-3.9 5.53-.81z"/></svg>
+        </div>
+        <p class="testimonial-text">"I'm not a legal expert by any means, but this broke everything down in a way that actually made sense and felt manageable. The templates saved me hours of time and eliminated so much guesswork. If you're on the fence, just get it. You won't regret it."</p>
+        <div class="testimonial-source">Verified Etsy Review</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- PRICING -->
 <section class="pricing reveal" id="pricing">
   <div class="pricing-inner">
@@ -622,7 +754,16 @@
       </div>
     </div>
 
-    <p style="text-align:center; font-size:13px; color:var(--muted); margin-top:2rem;">
+    <!-- Guarantee bar -->
+    <div class="guarantee-bar">
+      <svg class="guarantee-icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14 2L17.09 4.26L20.91 3.62L22.03 7.27L25.44 9.12L24.36 12.82L26 16.18L23.26 18.82L23.26 22.68L19.42 23.18L17.09 26.26L14 24.62L10.91 26.26L8.58 23.18L4.74 22.68L4.74 18.82L2 16.18L3.64 12.82L2.56 9.12L5.97 7.27L7.09 3.62L10.91 4.26L14 2Z" stroke="#5e8b7e" stroke-width="1.5" stroke-linejoin="round"/>
+        <path d="M9.5 14.5L12.5 17.5L18.5 11.5" stroke="#5e8b7e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <p class="guarantee-text"><strong>7-Day Confidence Guarantee:</strong> If you don't feel more prepared after using ClaimKit, email us within 7 days for a full refund. No hoops, no hassle.</p>
+    </div>
+
+    <p style="text-align:center; font-size:13px; color:var(--muted); margin-top:1.5rem;">
       Not sure which package fits your situation? <a href="mailto:hello@claimkithelp.com" style="color:var(--sage); text-decoration:none;">Email us</a>
     </p>
   </div>
@@ -679,6 +820,18 @@
       <div class="faq-item">
         <div class="faq-q">I'm really anxious about this. Is that normal? <span class="faq-arrow">↓</span></div>
         <div class="faq-a">Completely normal, and honestly, one of the biggest reasons ClaimKit exists. Most people have never been to court. The unknown is the hardest part. Every ClaimKit package is designed to replace that anxiety with clarity: you'll know exactly what to do, what to bring, what to say, and what to expect. You won't walk in feeling lost.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What if it doesn't work for my situation? <span class="faq-arrow">↓</span></div>
+        <div class="faq-a">ClaimKit comes with a 7-day guarantee. If you go through the materials and don't feel more prepared, email us for a full refund. We also offer email support with the Core and Complete packages to help you apply the guides to your specific case.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is this just generic legal templates I could find online? <span class="faq-arrow">↓</span></div>
+        <div class="faq-a">No. Every guide is written specifically for California small claims court, in plain language, with the emotional support most legal resources completely ignore. You won't find a "What to Say to the Judge" script or an "If You're Panicking" guide in a free courthouse handout.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">I'm not sure which package I need. <span class="faq-arrow">↓</span></div>
+        <div class="faq-a">If you haven't sent a demand letter yet, start with Starter ($49). If you've decided to go to court, Core ($99) has everything you need through your hearing. If you want complete coverage including judgment collection, go with Complete ($179). You can always upgrade later and only pay the difference.</div>
       </div>
     </div>
   </div>
