@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://claimkithelp.com/sitemap.xml
