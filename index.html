@@ -13,6 +13,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ClaimKit: California Small Claims, Done Right</title>
+<meta name="description" content="California small claims court, done right. Step-by-step guides, demand letter templates, court day scripts, and judgment collection. No legal experience needed. No lawyer required.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -507,6 +508,34 @@
     .hero { padding: 100px 1.25rem 60px; }
     .who-grid, .pricing-grid, .testimonials-grid { grid-template-columns: 1fr; }
   }
+
+  /* ===== LOOK INSIDE CAROUSEL ===== */
+  .look-inside { padding: 96px 2rem; background: var(--sage-pale); }
+  .look-inside-inner { max-width: 960px; margin: 0 auto; text-align: center; }
+  .ck-carousel { position: relative; margin: 48px auto 0; max-width: 900px; }
+  .ck-carousel-viewport { overflow: hidden; border-radius: 12px; background: var(--sage-mist); padding: 40px 32px; }
+  .ck-carousel-track { display: flex; transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1); will-change: transform; }
+  .ck-slide { flex: 0 0 100%; display: flex; flex-direction: column; align-items: center; padding: 0 12px; }
+  .ck-slide-img-wrap { position: relative; width: 100%; max-width: 600px; aspect-ratio: 8.5 / 11; background: var(--white); border-radius: 6px; box-shadow: 0 16px 40px rgba(46, 46, 46, 0.15), 0 2px 8px rgba(46, 46, 46, 0.08); overflow: hidden; }
+  .ck-slide-img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+  .ck-slide-caption { margin-top: 28px; text-align: center; max-width: 540px; }
+  .ck-slide-caption h3 { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 400; color: var(--charcoal); margin: 0 0 8px; letter-spacing: -0.01em; }
+  .ck-slide-caption p { font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.55; color: var(--muted); margin: 0; font-weight: 300; }
+  .ck-nav { position: absolute; top: 42%; transform: translateY(-50%); background: var(--white); border: 1px solid var(--border); color: var(--charcoal); width: 48px; height: 48px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 20px; line-height: 1; transition: all 0.2s ease; z-index: 2; box-shadow: 0 2px 8px rgba(46, 46, 46, 0.12); font-family: 'DM Sans', sans-serif; }
+  .ck-nav:hover { background: var(--sage); color: var(--white); border-color: var(--sage); }
+  .ck-nav-prev { left: -12px; }
+  .ck-nav-next { right: -12px; }
+  .ck-dots { display: flex; justify-content: center; gap: 10px; margin-top: 28px; }
+  .ck-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--border); border: none; cursor: pointer; padding: 0; transition: all 0.2s ease; }
+  .ck-dot.active { background: var(--sage); transform: scale(1.25); }
+  @media (max-width: 700px) {
+    .look-inside { padding: 64px 1.25rem; }
+    .ck-carousel-viewport { padding: 24px 8px; }
+    .ck-nav { width: 40px; height: 40px; font-size: 18px; }
+    .ck-nav-prev { left: 4px; }
+    .ck-nav-next { right: 4px; }
+    .ck-slide-caption h3 { font-size: 19px; }
+  }
 </style>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <!-- Meta Pixel Code -->
@@ -774,6 +803,44 @@ src="https://www.facebook.com/tr?id=929167986649671&ev=PageView&noscript=1"
   </div>
 </section>
 
+<!-- LOOK INSIDE CLAIMKIT -->
+<section class="look-inside reveal">
+  <div class="look-inside-inner">
+    <div class="section-label">Look Inside ClaimKit</div>
+    <h2 class="section-h2">Every page, written to be useful on your worst day.</h2>
+    <p class="section-sub" style="margin-left:auto;margin-right:auto;">A few sample pages from the 60 documents inside ClaimKit Complete. Plain language, practical templates, and calm guidance for the hard parts.</p>
+    <div class="ck-carousel" id="ckCarousel">
+      <div class="ck-carousel-viewport">
+        <div class="ck-carousel-track" id="ckTrack">
+          <div class="ck-slide">
+            <div class="ck-slide-img-wrap"><img class="ck-slide-img" src="images/01-overwhelmed-1.png" alt="Feeling Overwhelmed? Read This First"></div>
+            <div class="ck-slide-caption"><h3>When it feels like too much</h3><p>The first page people open. Calming, oriented, and immediately useful when panic hits.</p></div>
+          </div>
+          <div class="ck-slide">
+            <div class="ck-slide-img-wrap"><img class="ck-slide-img" src="images/02-roadmap-1.png" alt="Roadmap: Core"></div>
+            <div class="ck-slide-caption"><h3>Your roadmap</h3><p>Know exactly where you are, what comes next, and how long it usually takes.</p></div>
+          </div>
+          <div class="ck-slide">
+            <div class="ck-slide-img-wrap"><img class="ck-slide-img" src="images/03-demand-1.png" alt="Your Demand Letter"></div>
+            <div class="ck-slide-caption"><h3>Templates you can actually use</h3><p>Editable demand letter with a pre-send checklist and a three-sentence case test.</p></div>
+          </div>
+          <div class="ck-slide">
+            <div class="ck-slide-img-wrap"><img class="ck-slide-img" src="images/04-court-1.png" alt="Court Appearance Script"></div>
+            <div class="ck-slide-caption"><h3>What to say in court</h3><p>A quick-reference script for the day itself. Opening statement, how to present evidence, what to do if your mind goes blank.</p></div>
+          </div>
+          <div class="ck-slide">
+            <div class="ck-slide-img-wrap"><img class="ck-slide-img" src="images/05-boundary-1.png" alt="Calm Boundary Scripts"></div>
+            <div class="ck-slide-caption"><h3>For the hard conversations</h3><p>Scripts for when the other side pushes back, pressures you, or tries to pull you into an argument.</p></div>
+          </div>
+        </div>
+      </div>
+      <button class="ck-nav ck-nav-prev" id="ckPrev" aria-label="Previous slide">&larr;</button>
+      <button class="ck-nav ck-nav-next" id="ckNext" aria-label="Next slide">&rarr;</button>
+    </div>
+    <div class="ck-dots" id="ckDots"></div>
+  </div>
+</section>
+
 <!-- PRICING -->
 <section class="pricing reveal" id="pricing">
   <div class="pricing-inner">
@@ -983,6 +1050,49 @@ src="https://www.facebook.com/tr?id=929167986649671&ev=PageView&noscript=1"
       q.closest('.faq-item').classList.toggle('open');
     });
   });
+
+  // Look Inside carousel
+  (function() {
+    var track = document.getElementById('ckTrack');
+    if (!track) return;
+    var slides = track.children;
+    var total = slides.length;
+    var current = 0;
+    var dots = document.getElementById('ckDots');
+    var prev = document.getElementById('ckPrev');
+    var next = document.getElementById('ckNext');
+    var auto;
+    for (var i = 0; i < total; i++) {
+      var dot = document.createElement('button');
+      dot.className = 'ck-dot';
+      dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+      (function(idx){ dot.addEventListener('click', function() { goTo(idx); }); })(i);
+      dots.appendChild(dot);
+    }
+    function goTo(i) {
+      current = (i + total) % total;
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+      var ds = dots.children;
+      for (var j = 0; j < ds.length; j++) {
+        ds[j].className = 'ck-dot' + (j === current ? ' active' : '');
+      }
+      restartAuto();
+    }
+    function startAuto() { auto = setInterval(function() { goTo(current + 1); }, 6000); }
+    function restartAuto() { clearInterval(auto); startAuto(); }
+    prev.addEventListener('click', function() { goTo(current - 1); });
+    next.addEventListener('click', function() { goTo(current + 1); });
+    var startX = null;
+    track.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, {passive: true});
+    track.addEventListener('touchend', function(e) {
+      if (startX === null) return;
+      var dx = e.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) > 40) goTo(current + (dx < 0 ? 1 : -1));
+      startX = null;
+    });
+    goTo(0);
+    startAuto();
+  })();
 </script>
 
 </body>
