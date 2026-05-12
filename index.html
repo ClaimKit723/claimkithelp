@@ -1,6 +1,3 @@
-HTTP 200 
-Content-Type: text/html; charset=utf-8
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -393,17 +390,32 @@ Content-Type: text/html; charset=utf-8
     border-top: 0.5px solid var(--border);
   }
   .about-inner {
-    max-width: 640px;
+    max-width: 880px;
     margin: 0 auto;
   }
-  .about-inner p {
+  .about-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .about-photo {
+    width: 100%;
+  }
+  .about-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+  }
+  .about-text p {
     font-size: 15px;
     color: var(--muted);
     line-height: 1.75;
     font-weight: 300;
     margin-bottom: 1.25rem;
   }
-  .about-inner p:last-of-type {
+  .about-text p:last-of-type {
     margin-bottom: 0;
   }
   .about-signature {
@@ -418,6 +430,16 @@ Content-Type: text/html; charset=utf-8
     color: var(--muted);
     font-weight: 300;
     margin-top: 2px;
+  }
+  @media (max-width: 720px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .about-photo {
+      max-width: 220px;
+      margin: 0 auto;
+    }
   }
 
   /* ── EMAIL CAPTURE ── */
@@ -954,14 +976,21 @@ src="https://www.facebook.com/tr?id=929167986649671&ev=PageView&noscript=1"
 <!-- ABOUT -->
 <section class="about reveal">
   <div class="about-inner">
-    <div class="section-label">Why ClaimKit exists</div>
-    <h2 class="section-h2">Built by someone who's been there.</h2>
-    <p>I've always believed in kindness and in helping others. I have a background in finance and law, so when a close friend was dealing with a landlord dispute, I jumped in to help. What I found surprised me: small claims court is a completely different process from the type of law I was used to. The learning curve was steep, even with my background.</p>
-    <p>So I went looking for resources. Something that would walk us through it step by step. Something that would make the process feel less stressful, less overwhelming. I found courthouse pamphlets and law firm blog posts, but nothing that acknowledged the human side of it. The anxiety. The self-doubt. The feeling of being completely alone in something you've never done before.</p>
-    <p>That's why I built ClaimKit. Every guide, every template, every script was written with the same care and attention I'd give a friend sitting across my kitchen table. If you have a question, I personally read and respond to every email at support@claimkithelp.com. You're never just a transaction here.</p>
-    <div class="about-signature">
-      Lelia
-      <span>Founder, ClaimKit</span>
+    <div class="about-grid">
+      <div class="about-photo">
+        <img src="images/signature_photo_400x400.png" alt="Lelia, founder of ClaimKit" loading="lazy" />
+      </div>
+      <div class="about-text">
+        <div class="section-label">Why ClaimKit exists</div>
+        <h2 class="section-h2">Built by someone who's been there.</h2>
+        <p>I've always believed in kindness and in helping others. I have a background in finance and law, so when a close friend was dealing with a landlord dispute, I jumped in to help. What I found surprised me: small claims court is a completely different process from the type of law I was used to. The learning curve was steep, even with my background.</p>
+        <p>So I went looking for resources. Something that would walk us through it step by step. Something that would make the process feel less stressful, less overwhelming. I found courthouse pamphlets and law firm blog posts, but nothing that acknowledged the human side of it. The anxiety. The self-doubt. The feeling of being completely alone in something you've never done before.</p>
+        <p>That's why I built ClaimKit. Every guide, every template, every script was written with the same care and attention I'd give a friend sitting across my kitchen table. If you have a question, I personally read and respond to every email at support@claimkithelp.com. You're never just a transaction here.</p>
+        <div class="about-signature">
+          Lelia
+          <span>Founder, ClaimKit</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
