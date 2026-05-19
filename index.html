@@ -136,12 +136,50 @@
   }
   .btn-secondary:hover { border-color: var(--sage); transform: translateY(-1px); }
   .hero-trust {
-    margin-top: 3.5rem;
+    margin-top: 2rem;
     display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap;
-    animation: fadeUp .6s .4s ease both;
+    animation: fadeUp .6s .45s ease both;
   }
   .trust-item { display: flex; align-items: center; gap: 7px; font-size: 13px; color: var(--muted); }
   .trust-dot { width: 5px; height: 5px; background: var(--gold); border-radius: 50%; }
+
+  /* ── HERO REVIEWS STRIP ── */
+  .hero-reviews {
+    margin: 2.5rem auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    max-width: 760px;
+    animation: fadeUp .6s .35s ease both;
+  }
+  @media (max-width: 720px) {
+    .hero-reviews { grid-template-columns: 1fr; max-width: 360px; }
+  }
+  .hero-review-card {
+    background: var(--white);
+    border: 0.5px solid var(--border);
+    border-radius: 14px;
+    padding: 16px 18px;
+    text-align: left;
+    transition: border-color .2s, transform .2s;
+  }
+  .hero-review-card:hover { border-color: var(--sage); transform: translateY(-2px); }
+  .hero-review-stars { display: flex; gap: 2px; margin-bottom: 8px; }
+  .hero-review-stars svg { width: 12px; height: 12px; }
+  .hero-review-text {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 1.45;
+    color: var(--charcoal);
+    margin-bottom: 10px;
+  }
+  .hero-review-source {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+    font-weight: 500;
+  }
 
   /* ── FOR WHO ── */
   .for-who {
@@ -646,6 +684,41 @@ src="https://www.facebook.com/tr?id=929167986649671&ev=PageView&noscript=1"
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
       <a href="#how" class="btn-secondary">How it works</a>
+    </div>
+    <div class="hero-reviews">
+      <div class="hero-review-card">
+        <div class="hero-review-stars">
+          <svg viewBox="0 0 16 16" fill="#c9a96e"><path d="M8 0l2.47 5.01L16 5.82l-4 3.9.94 5.5L8 12.49l-4.94 2.73.94-5.5-4-3.9 5.53-.81z"/></svg>
+          <svg viewBox="0 0 16 16" fill="#c9a96e"><path d="M8 0l2.47 5.01L16 5.82l-4 3.9.94 5.5L8 12.49l-4.94 2.73.94-5.5-4-3.9 5.53-.81z"/></svg>
+          <svg viewBox="0 0 16 16" fill="#c9a96e"><path d="M8 0l2.47 5.01L16 5.82l-4 3.9.94 5.5L8 12.49l-4.94 2.73.94-5.5-4-3.9 5.53-.81z"/></svg>
+          <svg viewBox="0 0 16 16" fill="#c9a96e"><path d="M8 0l2.47 5.01L16 5.82l-4 3.9.94 5.5L8 12.49l-4.94 2.73.94-5.5-4-3.9 5.53-.81z"/></svg>
+          <svg viewBox="0 0 16 16" fill="#c9a96e"><path d="M8 0l2.47 5.01L16 5.82l-4 3.9.94 5.5L8 12.49l-4.94 2.73.94-5.5-4-3.9 5.53-.81z"/></svg>
+        </div>
+        <p class="hero-review-text">"Truly a must have if you're dealing with a case."</p>
+        <div class="hero-review-source">Verified Etsy Review</div>
+      </div>
+      <div class="hero-review-card">
+        <div class="hero-review-stars">
+          <svg viewBox="0 0 16 16" fill="#c9a96e"><path d="M8 0l2.47 5.01L16 5.82l-4 3.9.94 5.5L8 12.49l-4.94 2.73.94-5.5-4-3.9 5.53-.81z"/></svg>
+          <svg viewBox="0 0 16 16" fill="#c9a96e"><path d="M8 0l2.47 5.01L16 5.82l-4 3.9.94 5.5L8 12.49l-4.94 2.73.94-5.5-4-3.9 5.53-.81z"/></svg>
+          <svg viewBox="0 0 16 16" fill="#c9a96e"><path d="M8 0l2.47 5.01L16 5.82l-4 3.9.94 5.5L8 12.49l-4.94 2.73.94-5.5-4-3.9 5.53-.81z"/></svg>
+          <svg viewBox="0 0 16 16" fill="#c9a96e"><path d="M8 0l2.47 5.01L16 5.82l-4 3.9.94 5.5L8 12.49l-4.94 2.73.94-5.5-4-3.9 5.53-.81z"/></svg>
+          <svg viewBox="0 0 16 16" fill="#c9a96e"><path d="M8 0l2.47 5.01L16 5.82l-4 3.9.94 5.5L8 12.49l-4.94 2.73.94-5.5-4-3.9 5.53-.81z"/></svg>
+        </div>
+        <p class="hero-review-text">"Walked into court prepared and won."</p>
+        <div class="hero-review-source">Verified Google Review</div>
+      </div>
+      <div class="hero-review-card">
+        <div class="hero-review-stars">
+          <svg viewBox="0 0 16 16" fill="#c9a96e"><path d="M8 0l2.47 5.01L16 5.82l-4 3.9.94 5.5L8 12.49l-4.94 2.73.94-5.5-4-3.9 5.53-.81z"/></svg>
+          <svg viewBox="0 0 16 16" fill="#c9a96e"><path d="M8 0l2.47 5.01L16 5.82l-4 3.9.94 5.5L8 12.49l-4.94 2.73.94-5.5-4-3.9 5.53-.81z"/></svg>
+          <svg viewBox="0 0 16 16" fill="#c9a96e"><path d="M8 0l2.47 5.01L16 5.82l-4 3.9.94 5.5L8 12.49l-4.94 2.73.94-5.5-4-3.9 5.53-.81z"/></svg>
+          <svg viewBox="0 0 16 16" fill="#c9a96e"><path d="M8 0l2.47 5.01L16 5.82l-4 3.9.94 5.5L8 12.49l-4.94 2.73.94-5.5-4-3.9 5.53-.81z"/></svg>
+          <svg viewBox="0 0 16 16" fill="#c9a96e"><path d="M8 0l2.47 5.01L16 5.82l-4 3.9.94 5.5L8 12.49l-4.94 2.73.94-5.5-4-3.9 5.53-.81z"/></svg>
+        </div>
+        <p class="hero-review-text">"Paid for itself 10x over."</p>
+        <div class="hero-review-source">Verified Google Review</div>
+      </div>
     </div>
     <div class="hero-trust">
       <div class="trust-item"><div class="trust-dot"></div>No legal experience needed</div>
